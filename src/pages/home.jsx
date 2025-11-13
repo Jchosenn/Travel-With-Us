@@ -1,10 +1,11 @@
 import React from 'react'
-import { Navbar } from '../components/navbar'
+import { Header } from './header'
 
 export const Home = () => {
   return (
-    <div className=' dark:bg-black dark:text-white'>
-      <Navbar/>
+    <div className=' dark:bg-black/95 dark:text-white'>
+      <Header/>
+
       </div>
   )
 }

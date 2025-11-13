@@ -4,9 +4,9 @@ import { FaBars } from 'react-icons/fa'
 
 export const Navbar = () => {
   return (
-    <div className='flex items-center justify-around py-4'>
+    <div className='flex items-center justify-between px-6 py-6'>
         <img src={logo} alt="Travel with Us Logo" />
-        <FaBars className=''/>
+        <FaBars className='text-2xl cursor-pointer'/>
     </div>
   )
 }
