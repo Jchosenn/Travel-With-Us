@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import { CiLocationOn } from "react-icons/ci";
 import { FaLocationDot } from "react-icons/fa6";
@@ -44,12 +44,11 @@ export const Destination = () => {
     },
   ];
 
-  // handle mobile pagination (dots)
   const [current, setCurrent] = useState(0);
 
   return (
     <div className="py-10 px-6 md:px-8 lg:px-15 space-y-6">
-        <div className="space-y-5 pb-5 md:flex justify-between">
+        <div className="space-y-5 pb-5 md:flex justify-between items-center">
       <h1 className="text-3xl md:text-5xl lg:text-6xl font-semibold font-urbanist">
         Find your best destination
       </h1>
@@ -73,14 +72,13 @@ export const Destination = () => {
           </div>
           </div>
 
-      {/* Grid for Desktop / Carousel for Mobile */}
       <div className="relative">
         {/* Desktop grid */}
         <div className="hidden md:grid grid-cols-3 gap-x-10 gap-y-11">
           {destinations.map((place, index) => (
             <div
               key={index}
-              className="group rounded-xs overflow-hidden shadow-lg dark:bg-white dark:text-black transition"
+              className="group rounded-xs overflow-hidden shadow-lg dark:bg-white dark:text-black"
             >
               <img
                 src={place.image}
@@ -100,13 +98,13 @@ export const Destination = () => {
           ))}
         </div>
 
-        {/* Mobile view (single card + dots) */}
+        {/* Mobile view */}
         <div className="md:hidden">
-          <div className="rounded-xl overflow-hidden shadow-lg dark:bg-white dark:text-black">
+          <div className="group rounded-xl overflow-hidden shadow-lg dark:bg-white dark:text-black">
             <img
               src={destinations[current].image}
               alt={destinations[current].name}
-              className="w-full h-64 object-cover"
+              className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
             />
             <div className="p-4 space-y-2">
               <p className="font-urbanist font-bold text-2xl">
