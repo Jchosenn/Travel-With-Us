@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Navbar } from "../components/navbar";
 import { motion } from "framer-motion";
-import "../css/header.css";
+// import "../css/header.css";
 
 const useTypewriter = (text, speed = 90) => {
   const [output, setOutput] = useState("");
@@ -33,10 +33,10 @@ export const Header = () => {
   const typedRest = useTypewriter(restOfText);
 
   return (
-    <div className="hero-section relative text-white">
+    <div className="bg-[url('/imageBg/traveler-new.jpg')]  bg-cover bg-center bg-no-repeat  w-full relative text-white">
       <Navbar />
 
-      <div className="absolute inset-0"></div>
+      <div className="absolute inset-0 bg-black/60"></div>
 
       <section className="relative flex flex-col items-center justify-center text-center px-6 py-24 md:py-36 lg:py-38 z-10">
         <motion.div

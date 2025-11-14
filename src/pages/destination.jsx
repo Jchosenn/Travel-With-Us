@@ -71,7 +71,7 @@ export const Destination = () => {
           </p>
 
           <div className="flex items-center justify-between py-3 px-3 rounded-3xl border font-urbanist dark:bg-[#161616] bg-white dark:border-gray-800">
-            <CiLocationOn className="text-2xl" />
+            <CiLocationOn className="text-2xl animate-bounce" />
             <input
               type="text"
               placeholder="Search destinations.."
