@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
-import { Navbar } from "../components/navbar";
 import { motion } from "framer-motion";
-// import "../css/header.css";
+import { Navbar } from "./navbar";
 
 const useTypewriter = (text, speed = 90) => {
   const [output, setOutput] = useState("");
