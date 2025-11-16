@@ -41,7 +41,7 @@ export const About = () => {
       >
         For over 10 years, we’ve been helping travelers explore the world with
         confidence. Our clients trust us because we deliver unforgettable
-        experiences, exceptional service, and reliable guidance — every single
+        experiences, exceptional service, and reliable guidance every single
         time.
       </motion.p>
 
@@ -72,7 +72,7 @@ export const About = () => {
           </div>
         </motion.div>
 
-        {/* Card 2 - Highlight */}
+        {/* Card 2 */}
         <motion.div
           custom={1}
           variants={cardVariant}
@@ -112,7 +112,7 @@ export const About = () => {
             24/7 Customer Support.
           </p>
           <p className="pt-3 pb-6 text-[15px] text-black">
-            Got questions? We’re always available — anytime, anywhere.
+            Got questions? We’re always available anytime, anywhere.
           </p>
           <div className="flex items-center text-[#25A59E] justify-end space-x-2 font-semibold">
             <button>More details</button>
