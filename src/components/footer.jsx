@@ -15,7 +15,7 @@ export const Footer = () => {
         <p className='text-[32px] md:text-5xl lg:text-6xl font-semibold'>Get our best offer now!</p>
         <Link
         to='/'
-        className='bg-[#25A59E] rounded-md py-3 px-5'
+        className='bg-[#25A59E] rounded-md py-3 cursor-pointer px-5'
         >
         <button>Click here!</button>
         </Link>
