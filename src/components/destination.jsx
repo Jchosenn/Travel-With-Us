@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { motion } from "framer-motion";
 import { FaSearch } from "react-icons/fa";
 import { CiLocationOn } from "react-icons/ci";
 import { FaLocationDot } from "react-icons/fa6";
@@ -31,7 +32,7 @@ export const Destination = () => {
       place.name.toLowerCase().includes(search.toLowerCase())
     );
     setFilteredDestinations(results);
-    setCurrent(0); 
+    setCurrent(0);
   }, [search]);
 
   const handleTouchStart = (e) => {
@@ -60,7 +61,13 @@ export const Destination = () => {
   return (
     <div className="py-10 px-6 md:px-8 lg:px-15 space-y-6">
       {/* Header + Search */}
-      <div className="space-y-5 pb-5 md:flex justify-between items-center">
+      <motion.div
+        initial={{ opacity: 0, y: 60 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="space-y-5 pb-5 md:flex justify-between items-center"
+      >
         <h1 className="text-3xl md:text-5xl lg:text-6xl font-semibold font-urbanist">
           Find your best destination
         </h1>
@@ -78,46 +85,53 @@ export const Destination = () => {
               className="flex-1 mx-3 outline-none text-lg bg-transparent"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              onFocus={(e) => e.target.scrollIntoView({ behavior: "smooth", block: "center" })}
             />
             <div className="bg-orange-500 p-3 rounded-full cursor-pointer hover:bg-orange-600 transition">
               <FaSearch className="text-xl text-white" />
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
 
-      {/* Grid for Desktop */}
+      {/* Grid Desktop */}
       <div className="relative">
         <div className="hidden md:grid grid-cols-3 gap-x-10 gap-y-11">
-          {filteredDestinations.length > 0 ? (
-            filteredDestinations.map((place, index) => (
-              <div
-                key={index}
-                className="group rounded-xl overflow-hidden shadow-lg dark:bg-white dark:text-black hover:shadow-xl transition-transform"
-              >
-                <img
-                  src={place.image}
-                  alt={place.name}
-                  className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="p-4 space-y-2">
-                  <p className="font-urbanist font-bold text-2xl">{place.name}</p>
-                  <div className="flex items-center gap-2 text-gray-600">
-                    <FaLocationDot className="text-xl fill-[#25A59E]" />
-                    <p className="text-lg font-medium font-urbanist">
-                      {place.location}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            ))
-          ) : (
-            <p className="col-span-3 text-center text-gray-500 dark:text-gray-400 text-lg">
-              No destinations found.
-            </p>
-          )}
+  {filteredDestinations.length > 0 ? (
+    filteredDestinations.map((place, index) => (
+      <motion.div
+        key={index}
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{
+          duration: 0.7,
+          delay: index * 0.15,
+          ease: "easeOut",
+        }}
+        className="group rounded-xl overflow-hidden shadow-lg dark:bg-white dark:text-black 
+        hover:shadow-xl transition-transform card-tilt cursor-pointer"
+      >
+        <img
+          src={place.image}
+          alt={place.name}
+          className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110"
+        />
+        <div className="p-4 space-y-2">
+          <p className="font-urbanist font-bold text-2xl">{place.name}</p>
+          <div className="flex items-center gap-2 text-gray-600">
+            <FaLocationDot className="text-xl fill-[#25A59E]" />
+            <p className="text-lg font-medium font-urbanist">{place.location}</p>
+          </div>
         </div>
+      </motion.div>
+    ))
+  ) : (
+    <p className="col-span-3 text-center text-gray-500 dark:text-gray-400 text-lg">
+      No destinations found.
+    </p>
+  )}
+</div>
+
 
         {/* Mobile Swipe Carousel */}
         <div
@@ -128,7 +142,13 @@ export const Destination = () => {
         >
           {filteredDestinations.length > 0 ? (
             <>
-              <div className="group rounded-xl overflow-hidden shadow-lg dark:bg-white dark:text-black">
+              <motion.div
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className="group rounded-xl overflow-hidden shadow-lg dark:bg-white dark:text-black"
+              >
                 <img
                   src={filteredDestinations[current].image}
                   alt={filteredDestinations[current].name}
@@ -145,9 +165,8 @@ export const Destination = () => {
                     </p>
                   </div>
                 </div>
-              </div>
+              </motion.div>
 
-              {/* Pagination Dots */}
               <div className="flex justify-center mt-4 space-x-3">
                 {filteredDestinations.map((_, index) => (
                   <button
