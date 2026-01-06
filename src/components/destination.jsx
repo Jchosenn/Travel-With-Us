@@ -1,19 +1,20 @@
-import { useState, useEffect, useRef } from "react";
-import { motion } from "framer-motion";
-import { FaSearch } from "react-icons/fa";
-import { CiLocationOn } from "react-icons/ci";
-import { FaLocationDot } from "react-icons/fa6";
+import { useState, useEffect, useRef } from "react"
+import { motion } from "framer-motion"
+import { FaSearch } from "react-icons/fa"
+import { CiLocationOn } from "react-icons/ci"
+import { FaLocationDot } from "react-icons/fa6"
+import { Link } from "react-router-dom"
 
-import mirrorLake from "../assets/Images/Mirror-Lake.png";
-import hotAir from "../assets/Images/hot-air.png";
-import oeschinen from "../assets/Images/oeschinen.png";
-import rhinefalls from "../assets/Images/rhine-falls.png";
-import sunter from "../assets/Images/sunter.png";
-import negeri from "../assets/Images/negeri.png";
+import mirrorLake from "../assets/Images/Mirror-Lake.png"
+import hotAir from "../assets/Images/hot-air.png"
+import oeschinen from "../assets/Images/oeschinen.png"
+import rhinefalls from "../assets/Images/rhine-falls.png"
+import sunter from "../assets/Images/sunter.png"
+import negeri from "../assets/Images/negeri.png"
 
 export const Destination = () => {
   const allDestinations = [
-    { name: "Mirror Lake", location: "Jawa Tengah, Indonesia", image: mirrorLake },
+    { name: "Mirror Lake", path: "/Location", location: "Jawa Tengah, Indonesia", image: mirrorLake },
     { name: "Hot Air Balloon", location: "Cappadocia, Turkey", image: hotAir },
     { name: "Oeschinen Lake", location: "Pasuruan, Indonesia", image: oeschinen },
     { name: "Rhine Falls", location: "Zurich, Switzerland", image: rhinefalls },
@@ -111,11 +112,14 @@ export const Destination = () => {
         className="group rounded-xl overflow-hidden shadow-lg dark:bg-white dark:text-black 
         hover:shadow-xl transition-transform card-tilt cursor-pointer"
       >
+        <Link
+        to={place.path}
+        >
         <img
           src={place.image}
           alt={place.name}
           className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110"
-        />
+          />
         <div className="p-4 space-y-2">
           <p className="font-urbanist font-bold text-2xl">{place.name}</p>
           <div className="flex items-center gap-2 text-gray-600">
@@ -123,6 +127,7 @@ export const Destination = () => {
             <p className="text-lg font-medium font-urbanist">{place.location}</p>
           </div>
         </div>
+          </Link>
       </motion.div>
     ))
   ) : (
@@ -189,5 +194,5 @@ export const Destination = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
