@@ -1,6 +1,7 @@
 import React from "react";
-import { motion } from "framer-motion";
-import Customers from "/imageBg/travel-customers.jpg";
+import { motion } from "framer-motion"
+import Customers from "/imageBg/travel-customers.jpg"
+import { Link } from "react-router-dom";
 
 export const Experinece = () => {
   return (
@@ -42,7 +43,11 @@ export const Experinece = () => {
             whileHover={{ scale: 1.05 }}
             className="hidden md:block border-b border-[#25A59E] text-[#25A59E] dark:text-white font-medium cursor-pointer pb-1"
           >
+            <Link
+            to="/discovery">
+            
             Discover More
+            </Link>
           </motion.button>
         </div>
       </motion.div>

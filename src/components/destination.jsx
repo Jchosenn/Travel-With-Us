@@ -14,7 +14,7 @@ import negeri from "../assets/Images/negeri.png"
 
 export const Destination = () => {
   const allDestinations = [
-    { name: "Mirror Lake", path: "/Location", location: "Jawa Tengah, Indonesia", image: mirrorLake },
+    { name: "Mirror Lake", path: "/location", location: "Jawa Tengah, Indonesia", image: mirrorLake },
     { name: "Hot Air Balloon", location: "Cappadocia, Turkey", image: hotAir },
     { name: "Oeschinen Lake", location: "Pasuruan, Indonesia", image: oeschinen },
     { name: "Rhine Falls", location: "Zurich, Switzerland", image: rhinefalls },
