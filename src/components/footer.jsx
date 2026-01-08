@@ -1,10 +1,10 @@
-import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
-import logo from "../assets/Images/Travel.svg";
-import { FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
+import { Link } from "react-router-dom"
+import { motion } from "framer-motion"
+import logo from "../assets/Images/Travel.svg"
+import { FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa"
 
 export const Footer = () => {
-  const navLinks = ["Home", "Destination", "Guide", "Contact Us"];
+  const navLinks = ["Home", "Destination", "Guide", "Contact Us"]
 
   return (
     <div className="py-14 px-6 md:px-10 lg:px-20 font-urbanist">
@@ -86,5 +86,5 @@ export const Footer = () => {
         </div>
       </motion.div>
     </div>
-  );
-};
+  )
+}

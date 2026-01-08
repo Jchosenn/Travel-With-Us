@@ -1,35 +1,35 @@
-import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
-import { Navbar } from "./navbar";
+import { useEffect, useState } from "react"
+import { motion } from "framer-motion"
+import { Navbar } from "./navbar"
 
 const useTypewriter = (text, speed = 90) => {
-  const [output, setOutput] = useState("");
+  const [output, setOutput] = useState("")
 
   useEffect(() => {
     if (window.innerWidth < 768) {
-      setOutput(text);
-      return;
+      setOutput(text)
+      return
     }
 
-    let index = 0;
+    let index = 0
     const interval = setInterval(() => {
-      setOutput(text.slice(0, index));
-      index++;
-      if (index > text.length) clearInterval(interval);
-    }, speed);
+      setOutput(text.slice(0, index))
+      index++
+      if (index > text.length) clearInterval(interval)
+    }, speed)
 
-    return () => clearInterval(interval);
-  }, [text, speed]);
+    return () => clearInterval(interval)
+  }, [text, speed])
 
-  return output;
-};
+  return output
+}
 
 export const Header = () => {
-  const fullText = "Travel around the world";
-  const firstWord = "Travel";
-  const restOfText = "around the world";
+  const fullText = "Travel around the world"
+  const firstWord = "Travel"
+  const restOfText = "around the world"
 
-  const typedRest = useTypewriter(restOfText);
+  const typedRest = useTypewriter(restOfText)
 
   return (
     <div className="bg-[url('/imageBg/traveler-new.jpg')]  bg-cover bg-center bg-no-repeat  w-full relative text-white">

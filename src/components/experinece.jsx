@@ -1,7 +1,7 @@
-import React from "react";
+import React from "react"
 import { motion } from "framer-motion"
 import Customers from "/imageBg/travel-customers.jpg"
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"
 
 export const Experinece = () => {
   return (
@@ -69,5 +69,5 @@ export const Experinece = () => {
         />
       </motion.div>
     </div>
-  );
-};
+  )
+}

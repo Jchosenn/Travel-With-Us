@@ -4,60 +4,48 @@ import { FaSearch } from "react-icons/fa"
 import { CiLocationOn } from "react-icons/ci"
 import { FaLocationDot } from "react-icons/fa6"
 import { Link } from "react-router-dom"
-
-import mirrorLake from "../assets/Images/Mirror-Lake.png"
-import hotAir from "../assets/Images/hot-air.png"
-import oeschinen from "../assets/Images/oeschinen.png"
-import rhinefalls from "../assets/Images/rhine-falls.png"
-import sunter from "../assets/Images/sunter.png"
-import negeri from "../assets/Images/negeri.png"
+import { destinations } from "../data/destinationSub"
 
 export const Destination = () => {
-  const allDestinations = [
-    { name: "Mirror Lake", path: "/location", location: "Jawa Tengah, Indonesia", image: mirrorLake },
-    { name: "Hot Air Balloon", location: "Cappadocia, Turkey", image: hotAir },
-    { name: "Oeschinen Lake", location: "Pasuruan, Indonesia", image: oeschinen },
-    { name: "Rhine Falls", location: "Zurich, Switzerland", image: rhinefalls },
-    { name: "Sunter Lake", location: "Jawa Tengah, Indonesia", image: sunter },
-    { name: "Negeri di atas Awan", location: "Jawa Tengah, Indonesia", image: negeri },
-  ];
+  const allDestinations = destinations
 
-  const [search, setSearch] = useState("");
-  const [filteredDestinations, setFilteredDestinations] = useState(allDestinations);
-  const [current, setCurrent] = useState(0);
-  const touchStartX = useRef(0);
-  const touchEndX = useRef(0);
+  const [search, setSearch] = useState("")
+  const [filteredDestinations, setFilteredDestinations] =
+    useState(allDestinations)
+  const [current, setCurrent] = useState(0)
+  const touchStartX = useRef(0)
+  const touchEndX = useRef(0)
 
   useEffect(() => {
     const results = allDestinations.filter((place) =>
       place.name.toLowerCase().includes(search.toLowerCase())
-    );
-    setFilteredDestinations(results);
-    setCurrent(0);
-  }, [search]);
+    )
+    setFilteredDestinations(results)
+    setCurrent(0)
+  }, [search])
 
   const handleTouchStart = (e) => {
-    touchStartX.current = e.touches[0].clientX;
-  };
+    touchStartX.current = e.touches[0].clientX
+  }
 
   const handleTouchMove = (e) => {
-    touchEndX.current = e.touches[0].clientX;
-  };
+    touchEndX.current = e.touches[0].clientX
+  }
 
   const handleTouchEnd = () => {
-    const diff = touchStartX.current - touchEndX.current;
+    const diff = touchStartX.current - touchEndX.current
     if (Math.abs(diff) > 50) {
       if (diff > 0) {
         setCurrent((prev) =>
           prev === filteredDestinations.length - 1 ? 0 : prev + 1
-        );
+        )
       } else {
         setCurrent((prev) =>
           prev === 0 ? filteredDestinations.length - 1 : prev - 1
-        );
+        )
       }
     }
-  };
+  }
 
   return (
     <div className="py-10 px-6 md:px-8 lg:px-15 space-y-6">
@@ -97,46 +85,47 @@ export const Destination = () => {
       {/* Grid Desktop */}
       <div className="relative">
         <div className="hidden md:grid grid-cols-3 gap-x-10 gap-y-11">
-  {filteredDestinations.length > 0 ? (
-    filteredDestinations.map((place, index) => (
-      <motion.div
-        key={index}
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{
-          duration: 0.7,
-          delay: index * 0.15,
-          ease: "easeOut",
-        }}
-        className="group rounded-xl overflow-hidden shadow-lg dark:bg-white dark:text-black 
+          {filteredDestinations.length > 0 ? (
+            filteredDestinations.map((place, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 0.7,
+                  delay: index * 0.15,
+                  ease: "easeOut",
+                }}
+                className="group rounded-xl overflow-hidden shadow-lg dark:bg-white dark:text-black 
         hover:shadow-xl transition-transform card-tilt cursor-pointer"
-      >
-        <Link
-        to={place.path}
-        >
-        <img
-          src={place.image}
-          alt={place.name}
-          className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110"
-          />
-        <div className="p-4 space-y-2">
-          <p className="font-urbanist font-bold text-2xl">{place.name}</p>
-          <div className="flex items-center gap-2 text-gray-600">
-            <FaLocationDot className="text-xl fill-[#25A59E]" />
-            <p className="text-lg font-medium font-urbanist">{place.location}</p>
-          </div>
+              >
+                <Link to={`/destinationSub/${place.slug}`}>
+                  <img
+                    src={place.image}
+                    alt={place.name}
+                    className="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                  <div className="p-4 space-y-2">
+                    <p className="font-urbanist font-bold text-2xl">
+                      {place.name}
+                    </p>
+                    <div className="flex items-center gap-2 text-gray-600">
+                      <FaLocationDot className="text-xl fill-[#25A59E]" />
+                      <p className="text-lg font-medium font-urbanist">
+                        {place.location}
+                      </p>
+                    </div>
+                  </div>
+                </Link>
+              </motion.div>
+            ))
+          ) : (
+            <p className="col-span-3 text-center text-gray-500 dark:text-gray-400 text-lg">
+              No destinations found.
+            </p>
+          )}
         </div>
-          </Link>
-      </motion.div>
-    ))
-  ) : (
-    <p className="col-span-3 text-center text-gray-500 dark:text-gray-400 text-lg">
-      No destinations found.
-    </p>
-  )}
-</div>
-
 
         {/* Mobile Swipe Carousel */}
         <div
@@ -154,22 +143,24 @@ export const Destination = () => {
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 className="group rounded-xl overflow-hidden shadow-lg dark:bg-white dark:text-black"
               >
-                <img
-                  src={filteredDestinations[current].image}
-                  alt={filteredDestinations[current].name}
-                  className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="p-4 space-y-2">
-                  <p className="font-urbanist font-bold text-2xl">
-                    {filteredDestinations[current].name}
-                  </p>
-                  <div className="flex items-center gap-2 text-gray-600">
-                    <FaLocationDot className="text-xl fill-[#25A59E]" />
-                    <p className="text-lg font-medium font-urbanist">
-                      {filteredDestinations[current].location}
+                <Link to={filteredDestinations[current].path}>
+                  <img
+                    src={filteredDestinations[current].image}
+                    alt={filteredDestinations[current].name}
+                    className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="p-4 space-y-2">
+                    <p className="font-urbanist font-bold text-2xl">
+                      {filteredDestinations[current].name}
                     </p>
+                    <div className="flex items-center gap-2 text-gray-600">
+                      <FaLocationDot className="text-xl fill-[#25A59E]" />
+                      <p className="text-lg font-medium font-urbanist">
+                        {filteredDestinations[current].location}
+                      </p>
+                    </div>
                   </div>
-                </div>
+                </Link>
               </motion.div>
 
               <div className="flex justify-center mt-4 space-x-3">

@@ -1,5 +1,5 @@
-import { FaArrowRight } from "react-icons/fa";
-import { motion } from "framer-motion";
+import { FaArrowRight } from "react-icons/fa"
+import { motion } from "framer-motion"
 
 export const About = () => {
   const cardVariant = {
@@ -13,7 +13,7 @@ export const About = () => {
         ease: "easeOut",
       },
     }),
-  };
+  }
 
   return (
     <div className="pt-16 pb-14 px-4 font-urbanist md:px-12 lg:px-24 
@@ -122,5 +122,5 @@ export const About = () => {
 
       </div>
     </div>
-  );
-};
+  )
+}
