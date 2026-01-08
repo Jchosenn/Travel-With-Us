@@ -15,11 +15,11 @@ export const destinations = [
     price: 350,
     duration: "3 Days, 2 Nights",
     description:
-      "A calm and beautiful lake surrounded by mountains. Perfect for nature lovers and photographers.",
+      "Mirror Lake is a peaceful retreat surrounded by towering mountains and fresh air. Ideal for travelers looking to disconnect, relax, and reconnect with nature. The calm waters reflect the surrounding peaks, creating a picture-perfect experience.",
     highlights: [
-      "Mountain views",
-      "Boat experience",
-      "Peaceful environment",
+      "Guided lake tour",
+      "Boat ride experience",
+      "Nature photography spots",
     ],
   },
   {
@@ -31,8 +31,8 @@ export const destinations = [
     price: 520,
     duration: "2 Days, 1 Night",
     description:
-      "Enjoy breathtaking hot air balloon rides above stunning landscapes.",
-    highlights: ["Balloon ride", "Sunrise view", "Luxury stay"],
+      "Experience Cappadocia from above with a breathtaking hot air balloon ride at sunrise. This premium experience offers stunning views of valleys, rock formations, and ancient landscapes.",
+    highlights: ["Sunrise hot air balloon flight", "Luxury accommodation", "Professional tour guide"], 
   },
   {
     id: 3,
@@ -43,11 +43,11 @@ export const destinations = [
     price: 420,
     duration: "2 Days, 1 Night",
     description:
-       "A calm and beautiful lake surrounded by mountains. Perfect for nature lovers and photographers.",
+       "Oeschinen Lake offers crystal-clear waters surrounded by lush greenery and alpine views. A perfect short getaway for travelers seeking tranquility and scenic beauty.",
     highlights: [
-      "Mountain views",
-      "Boat experience",
-      "Peaceful environment",
+      "Scenic hiking trails",
+      "Boat ride access",
+      "Guided nature walk",
     ],
   },
   {
@@ -59,11 +59,11 @@ export const destinations = [
     price: 480,
     duration: "2 Days, 1 Night",
     description:
-       "A calm and beautiful lake surrounded by mountains. Perfect for nature lovers and photographers.",
+       "Rhine Falls is Europe’s largest waterfall, offering powerful views and unforgettable moments. This destination combines adventure with comfort, making it a must-see for travelers in Switzerland.",
     highlights: [
-      "Mountain views",
-      "Boat experience",
-      "Peaceful environment",
+      "Winter viewing platforms",
+      "Boat tour near the falls",
+      "City transfer service",
     ],
   },
   {
@@ -75,11 +75,11 @@ export const destinations = [
     price: 480,
     duration: "2 Days, 1 Night",
     description:
-       "A calm and beautiful lake surrounded by mountains. Perfect for nature lovers and photographers.",
+       "Sunter Lake is known for its serene atmosphere and wide open views. Whether you’re relaxing by the water or exploring nearby nature paths, this destination offers calm and balance.",
     highlights: [
-      "Mountain views",
-      "Boat experience",
-      "Peaceful environment",
+      "Lake side relaxation spots",
+      "Guided sightseeing",
+      "Photography sessions",
     ],
   },
   {
@@ -91,11 +91,11 @@ export const destinations = [
     price: 380,
     duration: "2 Days, 1 Night",
     description:
-       "A calm and beautiful lake surrounded by mountains. Perfect for nature lovers and photographers.",
+       "Known as the “Land Above the Clouds,” this destination offers magical views where clouds sit below your feet. A rare and unforgettable experience for early risers and nature explorers.",
     highlights: [
-      "Mountain views",
-      "Boat experience",
-      "Peaceful environment",
+      "Sunrise cloud-view experience",
+      "Guided mountain tour",
+      "Local culture exploration",
     ],
   },
   

@@ -13,7 +13,7 @@ export const DestinationDetails = () => {
   }
 
   return (
-    <div className="px-6 md:px-12 lg:px-20 py-12 space-y-12 font-urbanist">
+    <div className="dark:bg-[#0A0F14] dark:text-white px-6 md:px-12 lg:px-20 py-12 space-y-12 font-urbanist">
       {/* HERO */}
       <motion.img
         src={destination.image}

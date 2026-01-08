@@ -11,7 +11,7 @@ export const BookDestination = () => {
   const total = destination.price * guests
 
   return (
-    <div className="min-h-screen px-6 md:px-12 py-16 font-urbanist">
+    <div className="dark:bg-[#0A0F14] dark:text-white min-h-screen px-6 md:px-12 py-16 font-urbanist">
       <h1 className="text-4xl font-bold mb-8">
         Book {destination.name}
       </h1>
