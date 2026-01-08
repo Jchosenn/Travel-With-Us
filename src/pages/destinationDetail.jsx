@@ -1,15 +1,15 @@
-import { useParams, Link } from "react-router-dom";
-import { destinations } from "../data/destinationSub";
-import { FaLocationDot } from "react-icons/fa6";
-import { motion } from "framer-motion";
+import { useParams, Link } from "react-router-dom"
+import { destinations } from "../data/destinations"
+import { FaLocationDot } from "react-icons/fa6"
+import { motion } from "framer-motion"
 
 export const DestinationDetails = () => {
-  const { slug } = useParams();
+  const { slug } = useParams()
 
-  const destination = destinations.find((d) => d.slug === slug);
+  const destination = destinations.find((d) => d.slug === slug)
 
   if (!destination) {
-    return <p className="text-center mt-20">Destination not found</p>;
+    return <p className="text-center mt-20">Destination not found</p>
   }
 
   return (
@@ -63,5 +63,5 @@ export const DestinationDetails = () => {
         </Link>
       </div>
     </div>
-  );
-};
+  )
+}

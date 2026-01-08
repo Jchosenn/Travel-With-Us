@@ -4,7 +4,7 @@ import { FaSearch } from "react-icons/fa"
 import { CiLocationOn } from "react-icons/ci"
 import { FaLocationDot } from "react-icons/fa6"
 import { Link } from "react-router-dom"
-import { destinations } from "../data/destinationSub"
+import { destinations } from "../data/destinations"
 
 export const Destination = () => {
   const allDestinations = destinations
@@ -100,7 +100,7 @@ export const Destination = () => {
                 className="group rounded-xl overflow-hidden shadow-lg dark:bg-white dark:text-black 
         hover:shadow-xl transition-transform card-tilt cursor-pointer"
               >
-                <Link to={`/destinationSub/${place.slug}`}>
+                <Link to={`/destination/${place.slug}`}>
                   <img
                     src={place.image}
                     alt={place.name}
@@ -143,7 +143,7 @@ export const Destination = () => {
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 className="group rounded-xl overflow-hidden shadow-lg dark:bg-white dark:text-black"
               >
-                <Link to={filteredDestinations[current].path}>
+                <Link to={`/destination/${filteredDestinations[current].slug}`}>
                   <img
                     src={filteredDestinations[current].image}
                     alt={filteredDestinations[current].name}
