@@ -24,7 +24,7 @@ export const DestinationDetails = () => {
       />
 
       {/* INFO */}
-      <div className="max-w-4xl space-y-4">
+      <div className="max-w-4xl flex flex-col space-y-4">
         <h1 className="text-4xl md:text-5xl font-bold">{destination.name}</h1>
 
         <div className="flex items-center gap-2 text-gray-600">

@@ -36,7 +36,7 @@ export const BookDestination = () => {
         </p>
 
         <button className="w-full bg-[#25A59E] text-white py-4 rounded-xl text-lg">
-          Proceed to Payment (Demo)
+          Proceed to Payment 
         </button>
       </div>
     </div>
