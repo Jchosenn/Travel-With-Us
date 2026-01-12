@@ -3,6 +3,7 @@ import { Home } from "./pages/home"
 import { Discovery } from "./pages/discovery"
 import { DestinationDetails } from "./pages/destinationDetail"
 import { BookDestination } from "./pages/bookDestination"
+import { Success } from "./pages/success"
 
 
 export const router = createBrowserRouter([
@@ -21,5 +22,9 @@ export const router = createBrowserRouter([
   {
     path: "/destination/:slug/book",
     element: <BookDestination/>,
+  },
+    {
+    path: "/success",
+    element: <Success />,
   },
 ])
