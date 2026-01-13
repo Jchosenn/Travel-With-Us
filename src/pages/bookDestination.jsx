@@ -1,42 +1,43 @@
-import { useParams, useNavigate } from "react-router-dom";
-import { destinations } from "../data/destinations";
-import { useState, useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom"
+import { destinations } from "../data/destinations"
+import { useState, useEffect } from "react"
+import {toast} from "react-toastify"
+
 
 export const BookDestination = () => {
-  const { slug } = useParams();
-  const navigate = useNavigate();
-  const destination = destinations.find((d) => d.slug === slug);
+  const { slug } = useParams()
+  const navigate = useNavigate()
+  const destination = destinations.find((d) => d.slug === slug)
 
-  const [guests, setGuests] = useState(1);
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [date, setDate] = useState("");
-  const [paystackLoaded, setPaystackLoaded] = useState(false);
+  const [guests, setGuests] = useState(1)
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
+  const [date, setDate] = useState("")
+  const [paystackLoaded, setPaystackLoaded] = useState(false)
 
-  const total = destination.price * guests;
+  const total = destination.price * guests
 
-  // Load Paystack script dynamically
   useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://js.paystack.co/v1/inline.js";
-    script.async = true;
-    script.onload = () => setPaystackLoaded(true);
-    document.body.appendChild(script);
+    const script = document.createElement("script")
+    script.src = "https://js.paystack.co/v1/inline.js"
+    script.async = true
+    script.onload = () => setPaystackLoaded(true)
+    document.body.appendChild(script)
 
     return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
+      document.body.removeChild(script)
+    }
+  }, [])
 
   const handlePayment = () => {
     if (!paystackLoaded) {
-      alert("Payment gateway not loaded yet. Please try again in a moment.");
-      return;
+      toast.error("Payment gateway not loaded yet. Please try again in a moment.")
+      return
     }
 
     if (!name || !email || !date) {
-      alert("Please fill in all details");
-      return;
+      toast.error("Please fill in all details")
+      return
     }
 
     const handler = window.PaystackPop.setup({
@@ -52,16 +53,16 @@ export const BookDestination = () => {
         ],
       },
       callback: function (response) {
-        alert(`Payment Successful! Reference: ${response.reference}`);
-        navigate("/success", { state: { destination, total, guests } });
+        toast.success(`Payment Successful! Reference: ${response.reference}`)
+        navigate("/success", { state: { destination, total, guests } })
       },
       onClose: function () {
-        alert("Payment cancelled.");
+        toast.error("Payment cancelled.")
       },
-    });
+    })
 
-    handler.openIframe();
-  };
+    handler.openIframe()
+  }
 
   return (
     <div className="dark:bg-[#0A0F14] dark:text-white min-h-screen px-6 md:px-12 py-16 font-urbanist">
@@ -98,7 +99,7 @@ export const BookDestination = () => {
         </select>
 
         <p className="text-xl font-semibold">
-          Total: <span className="text-[#25A59E]">${total}</span>
+          Total: <span className="text-[#25A59E]">₦{total}</span>
         </p>
 
         <button
@@ -109,5 +110,5 @@ export const BookDestination = () => {
         </button>
       </div>
     </div>
-  );
-};
+  )
+}

@@ -53,7 +53,7 @@ export const DestinationDetails = () => {
       <div className="bg-white dark:bg-[#161616] shadow-2xl rounded-2xl p-6 max-w-md">
         <p className="text-lg">{destination.duration}</p>
         <p className="text-3xl font-bold text-[#25A59E] mt-2">
-          ${destination.price}
+          ₦{destination.price}
         </p>
 
         <Link to={`/destination/${slug}/book`}>

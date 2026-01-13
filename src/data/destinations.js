@@ -4,6 +4,8 @@ import oeschinen from "../assets/Images/oeschinen.png"
 import rhinefalls from "../assets/Images/rhine-falls.png"
 import sunter from "../assets/Images/sunter.png"
 import negeri from "../assets/Images/negeri.png"
+import rome from "../assets/Images/rome-italy.jpg"
+
 
 export const destinations = [
   {
@@ -12,7 +14,7 @@ export const destinations = [
     slug: "mirror-lake",
     location: "Jawa Tengah, Indonesia",
     image: mirrorLake,
-    price: 350,
+    price: 1300000,
     duration: "3 Days, 2 Nights",
     description:
       "Mirror Lake is a peaceful retreat surrounded by towering mountains and fresh air. Ideal for travelers looking to disconnect, relax, and reconnect with nature. The calm waters reflect the surrounding peaks, creating a picture-perfect experience.",
@@ -28,7 +30,7 @@ export const destinations = [
     slug: "hot-air-balloon",
     location: "Cappadocia, Turkey",
     image: hotAir,
-    price: 520,
+    price: 1500000,
     duration: "2 Days, 1 Night",
     description:
       "Experience Cappadocia from above with a breathtaking hot air balloon ride at sunrise. This premium experience offers stunning views of valleys, rock formations, and ancient landscapes.",
@@ -40,7 +42,7 @@ export const destinations = [
     slug: "oeschinen-lake",
     location: "Pasuruan, Indonesia",
     image: oeschinen,
-    price: 420,
+    price: 2000000,
     duration: "2 Days, 1 Night",
     description:
        "Oeschinen Lake offers crystal-clear waters surrounded by lush greenery and alpine views. A perfect short getaway for travelers seeking tranquility and scenic beauty.",
@@ -56,7 +58,7 @@ export const destinations = [
     slug: "rhine-falls",
     location: "Zurich, Switzerland",
     image: rhinefalls,
-    price: 480,
+    price: 1800000,
     duration: "2 Days, 1 Night",
     description:
        "Rhine Falls is Europe’s largest waterfall, offering powerful views and unforgettable moments. This destination combines adventure with comfort, making it a must-see for travelers in Switzerland.",
@@ -72,7 +74,7 @@ export const destinations = [
     slug: "sunter-lake",
     location: "Jawa Tengah, Indonesia",
     image: sunter,
-    price: 480,
+    price: 2500000,
     duration: "2 Days, 1 Night",
     description:
        "Sunter Lake is known for its serene atmosphere and wide open views. Whether you’re relaxing by the water or exploring nearby nature paths, this destination offers calm and balance.",
@@ -88,7 +90,23 @@ export const destinations = [
     slug: "negeri-di-atas-awan",
     location: "Jawa Tengah, Indonesia",
     image: negeri,
-    price: 380,
+    price: 1700000,
+    duration: "2 Days, 1 Night",
+    description:
+       "Known as the “Land Above the Clouds,” this destination offers magical views where clouds sit below your feet. A rare and unforgettable experience for early risers and nature explorers.",
+    highlights: [
+      "Sunrise cloud-view experience",
+      "Guided mountain tour",
+      "Local culture exploration",
+    ],
+  },
+  {
+    id: 7,
+    name: "Colosseum",
+    slug: "colosseum-rome",
+    location: "Rome, Italy",
+    image: rome,
+    price: 2260000,
     duration: "2 Days, 1 Night",
     description:
        "Known as the “Land Above the Clouds,” this destination offers magical views where clouds sit below your feet. A rare and unforgettable experience for early risers and nature explorers.",
