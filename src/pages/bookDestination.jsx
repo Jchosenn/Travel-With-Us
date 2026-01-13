@@ -151,23 +151,3 @@ export const BookDestination = () => {
     </div>
   )
 }
-
-
-{/* <div className="max-w-lg bg-white dark:bg-[#161616] p-6 rounded-2xl shadow-xl space-y-4">
-        <input
-          className="w-full border p-3 rounded-lg"
-          placeholder="Full Name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-        
-        
-
-        
-
-        <p className="text-xl font-semibold">
-          Total: <span className="text-[#25A59E]">${total}</span>
-        </p>
-
-        
-      </div> */}
