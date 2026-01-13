@@ -5,6 +5,9 @@ import rhinefalls from "../assets/Images/rhine-falls.png"
 import sunter from "../assets/Images/sunter.png"
 import negeri from "../assets/Images/negeri.png"
 import rome from "../assets/Images/rome-italy.jpg"
+import barca from "../assets/Images/barca.jpg"
+import thun from "../assets/Images/Thun.jpg"
+
 
 
 export const destinations = [
@@ -116,7 +119,38 @@ export const destinations = [
       "Local culture exploration",
     ],
   },
-  
+  {
+    id: 8,
+    name: "Basílica de la Sagrada",
+    slug: "basílica-de-la-sagrada",
+    location: "Barcelona, Spain",
+    image: barca,
+    price: 920000,
+    duration: "2 Days, 1 Night",
+    description:
+       "Known as the “Land Above the Clouds,” this destination offers magical views where clouds sit below your feet. A rare and unforgettable experience for early risers and nature explorers.",
+    highlights: [
+      "Sunrise cloud-view experience",
+      "Guided mountain tour",
+      "Local culture exploration",
+    ],
+  },
+  {
+    id: 9,
+    name: "Thun Bern Switzerland",
+    slug: "thun-bern-switzerland",
+    location: "Bern, Switzerland",
+    image: thun,
+    price: 720000,
+    duration: "3 Days, 2 Night",
+    description:
+       "Known as the “Land Above the Clouds,” this destination offers magical views where clouds sit below your feet. A rare and unforgettable experience for early risers and nature explorers.",
+    highlights: [
+      "Sunrise cloud-view experience",
+      "Guided mountain tour",
+      "Local culture exploration",
+    ],
+  },
 ]
 
     
