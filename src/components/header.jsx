@@ -32,7 +32,7 @@ export const Header = () => {
   const typedRest = useTypewriter(restOfText)
 
   return (
-    <div className="bg-[url('/imageBg/traveler-new.jpg')]  bg-cover bg-center bg-no-repeat  w-full relative text-white">
+    <div className="bg-[url('/imageBg/traveler-new.jpg')]  bg-cover bg-center bg-no-repeat  w-full relative text-white" id="home">
       <Navbar />
 
       <div className="absolute inset-0 bg-black/60"></div>

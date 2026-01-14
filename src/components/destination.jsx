@@ -48,7 +48,7 @@ export const Destination = () => {
   }
 
   return (
-    <div className="py-10 px-6 md:px-8 lg:px-15 space-y-6">
+    <div className="py-10 px-6 md:px-8 lg:px-15 space-y-6" id="destination">
       {/* Header + Search */}
       <motion.div
         initial={{ opacity: 0, y: 60 }}

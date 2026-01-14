@@ -1,15 +1,19 @@
 import { Link } from "react-router-dom"
+import { HashLink } from "react-router-hash-link"
 import { motion } from "framer-motion"
 import logo from "../assets/Images/Travel.svg"
 import { FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa"
 
 export const Footer = () => {
-  const navLinks = ["Home", "Destination", "Guide", "Contact Us"]
+  const navLinks = [
+    {name:"Home", path: "/#home"}, 
+    {name:"Destination", path: "/#destination"}, 
+    {name:"Guide", path: "/"}, 
+    {name:"Contact Us", path: "/"},]
 
   return (
     <div className="py-14 px-6 md:px-10 lg:px-20 font-urbanist">
       
-      {/* CTA Section */}
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -31,17 +35,14 @@ export const Footer = () => {
         </Link>
       </motion.div>
 
-      {/* Divider */}
       <div className="border-t border-gray-300 dark:border-gray-700 mt-12 pt-10" />
 
-      {/* Footer content */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, ease: "easeOut", delay: 0.15 }}
         className="space-y-8"
       >
-        {/* Logo + Text */}
         <div className="space-y-3">
           <img src={logo} alt="Travel Logo" className="w-16" />
           <p className="text-gray-600 dark:text-gray-300 max-w-md">
@@ -49,10 +50,8 @@ export const Footer = () => {
           </p>
         </div>
 
-        {/* Bottom row: Socials + Navigation */}
         <div className="flex flex-col md:flex-row md:justify-between gap-10 pt-4">
 
-          {/* Social Icons */}
           <div className="flex gap-5">
             {[FaInstagram, FaTwitter, FaYoutube].map((Icon, index) => (
               <motion.div
@@ -66,7 +65,6 @@ export const Footer = () => {
             ))}
           </div>
 
-          {/* Footer Navigation */}
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -79,7 +77,7 @@ export const Footer = () => {
                 whileHover={{ x: 4, opacity: 0.7 }}
                 className="cursor-pointer transition"
               >
-                {link}
+                <HashLink smooth to={link.path}>{link.name}</HashLink>
               </motion.p>
             ))}
           </motion.div>
