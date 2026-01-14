@@ -9,12 +9,12 @@ export const DestinationDetails = () => {
   const destination = destinations.find((d) => d.slug === slug)
 
   if (!destination) {
-    return <p className="text-center mt-20">Destination not found</p>
+    return <p className="text-center mt-20 font-urbanist">Destination not found.</p>
   }
 
   return (
-    <div className="dark:bg-[#0A0F14] dark:text-white px-6 md:px-12 lg:px-20 py-12 space-y-12 font-urbanist" id="detail">
-      {/* HERO */}
+    <div className="dark:bg-[#0A0F14] dark:text-white px-6 md:px-12 lg:px-20 py-12 space-y-12 font-urbanist">
+
       <motion.img
         src={destination.image}
         alt={destination.name}
@@ -23,7 +23,6 @@ export const DestinationDetails = () => {
         animate={{ opacity: 1, scale: 1 }}
       />
 
-      {/* INFO */}
       <div className="max-w-4xl flex flex-col space-y-4">
         <h1 className="text-4xl md:text-5xl font-bold">{destination.name}</h1>
 
@@ -36,7 +35,6 @@ export const DestinationDetails = () => {
           {destination.description}
         </p>
 
-        {/* TRUST SIGNALS */}
         <ul className="grid md:grid-cols-3 gap-4 pt-4">
           {destination.highlights.map((item, i) => (
             <li
@@ -49,7 +47,6 @@ export const DestinationDetails = () => {
         </ul>
       </div>
 
-      {/* BOOKING CARD */}
       <div className="bg-white dark:bg-[#161616] shadow-2xl rounded-2xl p-6 max-w-md">
         <p className="text-lg">{destination.duration}</p>
         <p className="text-3xl font-bold text-[#25A59E] mt-2">

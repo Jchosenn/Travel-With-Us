@@ -1,7 +1,7 @@
-import React from "react"
 import { motion } from "framer-motion"
 import Customers from "/imageBg/travel-customers.jpg"
 import { Link } from "react-router-dom"
+import { HashLink } from "react-router-hash-link"
 
 export const Experinece = () => {
   return (
@@ -11,7 +11,6 @@ export const Experinece = () => {
       md:gap-10 lg:gap-16 space-y-10 md:space-y-0
       transition-all duration-500"
     >
-      {/* Left Text Section */}
       <motion.div
         initial={{ opacity: 0, y: 60 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -29,7 +28,6 @@ export const Experinece = () => {
           agent, <span className="text-[#25A59E] font-semibold">Travel!</span>
         </p>
 
-        {/* Buttons */}
         <div className="flex gap-6 items-center">
           <motion.button
             whileHover={{ scale: 1.05 }}
@@ -43,16 +41,15 @@ export const Experinece = () => {
             whileHover={{ scale: 1.05 }}
             className="hidden md:block border-b border-[#25A59E] text-[#25A59E] dark:text-white font-medium cursor-pointer pb-1"
           >
-            <Link
-            to="/discovery">
+            <HashLink smooth
+            to="/#destination">
             
             Discover More
-            </Link>
+            </HashLink>
           </motion.button>
         </div>
       </motion.div>
 
-      {/* Right Image Section */}
       <motion.div
         initial={{ opacity: 0, x: 80 }}
         whileInView={{ opacity: 1, x: 0 }}

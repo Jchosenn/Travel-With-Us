@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 import { HashLink } from "react-router-hash-link"
 import { motion } from "framer-motion"
 import logo from "../assets/Images/Travel.svg"
-import { FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa"
+import { FaInstagram, FaYoutube, FaXTwitter } from "react-icons/fa6"
 
 export const Footer = () => {
   const navLinks = [
@@ -10,6 +10,12 @@ export const Footer = () => {
     {name:"Destination", path: "/#destination"}, 
     {name:"Guide", path: "/"}, 
     {name:"Contact Us", path: "/"},]
+
+    const socials = [
+      {icon: FaInstagram, url: "https://www.instagram.com/jchosenn09/" },
+      {icon: FaYoutube, url: "https://www.instagram.com/jchosenn09/" },
+      {icon: FaXTwitter, url: "https://www.instagram.com/jchosenn09/" },
+    ]
 
   return (
     <div className="py-14 px-6 md:px-10 lg:px-20 font-urbanist">
@@ -53,14 +59,15 @@ export const Footer = () => {
         <div className="flex flex-col md:flex-row md:justify-between gap-10 pt-4">
 
           <div className="flex gap-5">
-            {[FaInstagram, FaTwitter, FaYoutube].map((Icon, index) => (
+            {socials.map((Icon, index) => (
               <motion.div
                 key={index}
                 whileHover={{ scale: 1.15, rotate: 5 }}
                 whileTap={{ scale: 0.9 }}
                 className="w-10 h-10 bg-[#EAFAF9] text-[#25A59E] rounded-full flex items-center justify-center shadow-sm cursor-pointer"
-              >
-                <Icon className="text-xl" />
+              ><a href={Icon.url} target="_blank" rel="noopener noreferrer">
+                <Icon.icon className="text-xl" />
+              </a>
               </motion.div>
             ))}
           </div>

@@ -49,7 +49,6 @@ export const Destination = () => {
 
   return (
     <div className="py-10 px-6 md:px-8 lg:px-15 space-y-6" id="destination">
-      {/* Header + Search */}
       <motion.div
         initial={{ opacity: 0, y: 60 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -82,7 +81,6 @@ export const Destination = () => {
         </div>
       </motion.div>
 
-      {/* Grid Desktop */}
       <div className="relative">
         <div className="hidden md:grid grid-cols-3 gap-x-10 gap-y-11">
           {filteredDestinations.length > 0 ? (
@@ -127,7 +125,7 @@ export const Destination = () => {
           )}
         </div>
 
-        {/* Mobile Swipe Carousel */}
+        {/* Mobile Carousel */}
         <div
           className="md:hidden"
           onTouchStart={handleTouchStart}
