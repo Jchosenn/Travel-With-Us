@@ -42,7 +42,7 @@ export const Experinece = () => {
             className="hidden md:block border-b border-[#25A59E] text-[#25A59E] dark:text-white font-medium cursor-pointer pb-1"
           >
             <HashLink smooth
-            to="/#destination">
+            to="/discovery">
             
             Discover More
             </HashLink>
