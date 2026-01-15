@@ -41,7 +41,7 @@ export const BookDestination = () => {
     }
 
     const handler = window.PaystackPop.setup({
-      key: "pk_test_c0acef4dacb3c6dd2201ae7b5842a379cfb1429b",
+      key: import.meta.env.VITE_PAYSTACK_PUBLIC_KEY,
       email,
       amount: total * 100,
       currency: "NGN",
@@ -71,7 +71,6 @@ export const BookDestination = () => {
       </h1>
 
       <div className="flex flex-col md:flex-row gap-12 max-w-6xl mx-auto">
-        {/* Left Column: Booking Form */}
         <div className="flex-1 bg-white dark:bg-[#161616] p-8 rounded-2xl shadow-xl space-y-6">
           <h2 className="text-2xl font-semibold mb-4">Traveler Information</h2>
 
@@ -122,7 +121,6 @@ export const BookDestination = () => {
         </button>
         </div>
 
-        {/* Right Column: Trip Summary */}
         <div className="flex-1 bg-[#F3F3F3] dark:bg-[#111] p-8 rounded-2xl shadow-lg space-y-6">
           <h2 className="text-2xl font-semibold">Trip Summary</h2>
 
