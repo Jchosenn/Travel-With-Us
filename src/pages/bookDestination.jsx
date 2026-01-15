@@ -12,8 +12,17 @@ export const BookDestination = () => {
   const [guests, setGuests] = useState(1)
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
+  const [phone, setPhone] = useState("")
   const [date, setDate] = useState("")
   const [paystackLoaded, setPaystackLoaded] = useState(false)
+
+  const isValidEmail = (email) =>{
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+  }
+  const isValidPhone =(phone) =>{
+    return /^(?:\+234|0)[789][01]\d{8}$/.test(phone)
+  }
+
 
   const total = destination.price * guests
 
@@ -35,8 +44,18 @@ export const BookDestination = () => {
       return
     }
 
-    if (!name || !email || !date) {
-      toast.error("Please fill in all details")
+    if (!name || !email || !phone|| !date) {
+      toast.error("Please fill in all required details")
+      return
+    }
+
+    if (!isValidEmail(email)){
+      toast.error("Enter a valid email")
+      return
+    }
+
+    if (!isValidPhone(phone)){
+      toast.error("Enter a valid Phone Number")
       return
     }
 
@@ -89,7 +108,9 @@ export const BookDestination = () => {
           <input
             type="tel"
             className="w-full border p-3 rounded-lg focus:ring-2 focus:ring-[#25A59E] transition"
-            placeholder="Phone Number"
+            placeholder="Phone Number (e.g. 08012345678)"
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
           />
 
           <h2 className="text-2xl font-semibold mt-6 mb-4">Trip Details</h2>

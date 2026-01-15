@@ -140,7 +140,7 @@ export const Discovery = () => {
                 </motion.div>
               </div>
             </div>
-          </motion.div>
+          </motion.div>  
         ))}
       </motion.div>
 

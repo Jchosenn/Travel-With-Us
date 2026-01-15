@@ -30,11 +30,11 @@ export const Footer = () => {
           Get our best offer now!
         </h2>
 
-        <Link to="/">
+        <Link to="/discovery">
           <motion.button
             whileHover={{ scale: 1.07 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-[#25A59E] text-white rounded-md py-3 px-6 text-lg font-medium shadow-sm hover:shadow-lg transition"
+            className="bg-[#25A59E] text-white rounded-md py-3 px-6 text-lg font-medium shadow-sm cursor-pointer hover:shadow-lg transition"
           >
             Click here!
           </motion.button>
