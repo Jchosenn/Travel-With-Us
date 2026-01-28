@@ -71,23 +71,31 @@ src/
 
 ## Getting Started
 
-### 1. Clone repo
+### 1️⃣ Clone repo
 ```bash
 git clone https://github.com/yourusername/travel-With-Us.git
 cd travel-With-Us
 ```
-### 2. Install dependencies 
+### 2️⃣ Install dependencies 
 ```bash
 npm install
+or 
+yarn install
 ```
 
-### 3. Environment Variables
-create .env in root
-VITE_PAYSTACK_PUBLIC_KEY=pk_test_c0acef4dacb3c6dd2201ae7b5842a379cfb1429b
-
-### 4. Run locally
+### 3️⃣ Run locally
 ```bash
 npm run dev
 ```
 
 Visit http://localhost:5173
+
+---
+
+## 👨‍💻 About the Developer
+Jonathan Chosen: A web Frontend Engineer. I help founders, startups, enterprise and business owners build the ideal websites that Attract Users, Keep Users, and Generate Sales.
+
+[Protfolio](https://portfolio-jonathan-chosen.vercel.app/)
+
+[Connect With me on LinkedIn](https://www.linkedin.com/in/chosen-jonathan/)
+
