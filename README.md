@@ -3,6 +3,9 @@
 A mordern responsive booking web app built with **React**, **TailwindCSS**, **Framer Motion**, and **PayStack** Integration. Expolore Destinations, view deatils and book trips seamlessly.
 
 
+---
+
+
 ## Features
 
 ### Core
@@ -29,6 +32,9 @@ A mordern responsive booking web app built with **React**, **TailwindCSS**, **Fr
 - Toast notifications using **Sonner** (custom fonts applied)
 
 
+---
+
+
 ## Tech Stack
 - **React 19**
 - **React Router v6** + Hashlink
@@ -36,3 +42,34 @@ A mordern responsive booking web app built with **React**, **TailwindCSS**, **Fr
 - **Framer Motion**
 - **Paystack Inline**
 - **Sonner Toast**
+
+---
+
+
+## Project Structure
+src/
+│
+├─ assets/ # Images & static assets
+├─ components/ # Reusable components
+├─ data/ # Destination data
+├─ layout/ # rootLayout
+├─ pages/
+│ ├─ Home.jsx
+│ ├─ Discovery.jsx
+│ ├─ DestinationDetail.jsx
+│ ├─ BookDestination.jsx
+│ └─ Success.jsx
+├─ router.jsx # Routes
+├─ App.jsx
+└─ index.jsx
+ 
+
+ 
+---
+
+## Getting Started
+
+### 1. Clone repo
+```bash
+git clone https://github.com/yourusername/travel-With-Us.git
+cd travel-With-Us
