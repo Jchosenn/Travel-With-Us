@@ -1,4 +1,4 @@
-# The Travel Booking App
+# Travel With Us Booking App
 
 A mordern responsive booking web app built with **React**, **TailwindCSS**, **Framer Motion**, and **PayStack** Integration. Expolore Destinations, view deatils and book trips seamlessly.
 
@@ -73,3 +73,6 @@ src/
 ```bash
 git clone https://github.com/yourusername/travel-With-Us.git
 cd travel-With-Us
+
+### 2. Install dependencies 
+npm install
