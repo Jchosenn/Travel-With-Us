@@ -47,6 +47,7 @@ A mordern responsive booking web app built with **React**, **TailwindCSS**, **Fr
 
 
 ## Project Structure
+```bash
 src/
 │
 ├─ assets/ # Images & static assets
@@ -62,6 +63,7 @@ src/
 ├─ router.jsx # Routes
 ├─ App.jsx
 └─ index.jsx
+```
  
 
  
