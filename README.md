@@ -73,15 +73,19 @@ src/
 ```bash
 git clone https://github.com/yourusername/travel-With-Us.git
 cd travel-With-Us
-
-2. Install dependencies 
+```
+### 2. Install dependencies 
+```bash
 npm install
+```
 
-3. Environment Variables
+### 3. Environment Variables
 create .env in root
 VITE_PAYSTACK_PUBLIC_KEY=pk_test_c0acef4dacb3c6dd2201ae7b5842a379cfb1429b
 
-4. Run locally
+### 4. Run locally
+```bash
 npm run dev
+```
 
 Visit http://localhost:5173
