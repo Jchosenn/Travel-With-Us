@@ -16,3 +16,23 @@ A mordern responsive booking web app built with **React**, **TailwindCSS**, **Fr
 - Email & Phone validation
 - **Payment Integration**: Paystack inline payment with success and error toasts
 - **Success Page**: Booking confirmation and summary 
+
+### Animations
+- Smooth **card hover and scroll animations** with **Framer Motion**
+- Section fade-ins and slide-ins
+- Interactive Buttons and hover effects
+
+### UX Enhancements
+- Scroll to top on page change
+- Smooth hashLinks scrolling 
+- Dark mode support 
+- Toast notifications using **Sonner** (custom fonts applied)
+
+
+## Tech Stack
+- **React 19**
+- **React Router v6** + Hashlink
+- **Tailwind CSS**
+- **Framer Motion**
+- **Paystack Inline**
+- **Sonner Toast**
