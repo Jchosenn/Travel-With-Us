@@ -62,7 +62,9 @@ src/
 │ └─ Success.jsx
 ├─ router.jsx # Routes
 ├─ App.jsx
-└─ index.jsx
+├─ index.jsx
+├─ package.json
+└─ README.md
 ```
  
 
